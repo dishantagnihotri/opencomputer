@@ -4,12 +4,24 @@ import CodeBlock from "@/components/CodeBlock";
 const Index = () => (
   <div className="min-h-screen">
     {/* Nav */}
-    <nav className="max-w-[994px] mx-auto px-10 py-6 flex items-center">
-      <span className="font-mono-brand text-[15px] font-medium tracking-tight logo-ai-hover cursor-pointer" data-text="opencomputer">opencomputer</span>
+    <nav className="max-w-[994px] mx-auto px-10 py-6 flex items-center justify-between">
+      <span
+        className="glitch-logo font-mono text-[15px] font-medium tracking-tight text-foreground"
+        data-text="opencomputer"
+      >
+        <a
+          href="/"
+          className="font-display text-lg font-medium tracking-tight text-foreground logo-ai-hover cursor-pointer no-underline"
+          data-text="digger"
+        >
+          digger
+        </a>{" "}
+        / opencomputer
+      </span>
     </nav>
 
     {/* Main */}
-    <main className="max-w-[994px] mx-auto px-10 pt-10 pb-[120px]">
+    <main className="max-w-[994px] mx-auto px-10 pt-10 pb-[60px]">
       <FadeIn>
         <h1 className="font-heading text-[clamp(42px,6vw,64px)] leading-[1.15] tracking-[-1.5px] mb-10">
           Agents are becoming the application.
@@ -19,11 +31,17 @@ const Index = () => (
       <FadeIn delay={0.08}>
         <div className="mb-10 space-y-7">
           <p className="text-[17px] leading-[1.75] tracking-[-0.1px]">
-            Today, people build an app and the app calls an agent to do a task. The app is the product, the agent is a feature. That's{" "}
-            <em className="font-heading text-[19px]">sandbox-as-tool</em> territory.
+            Today, people build an app and the app calls an agent to do a task.
+            The app is the product, the agent is a feature. That's{" "}
+            <em className="font-heading text-[19px]">sandbox-as-tool</em>{" "}
+            territory.
           </p>
           <p className="text-[17px] leading-[1.75] tracking-[-0.1px]">
-            We think the agent <em className="font-heading text-[19px]">is</em> the product. Someone builds a support agent, a research agent, a coding agent—that agent needs to live somewhere, have a URL, and run. Stop treating it like a function call. Deploy it like a service.
+            We think the agent <em className="font-heading text-[19px]">is</em>{" "}
+            the product. Someone builds a support agent, a research agent, a
+            coding agent—that agent needs to live somewhere, have a URL, and
+            run. Stop treating it like a function call. Deploy it like a
+            service.
           </p>
         </div>
       </FadeIn>
@@ -41,11 +59,15 @@ const Index = () => (
       <FadeIn>
         <div className="mb-14 space-y-7">
           <p className="text-[17px] leading-[1.75] tracking-[-0.1px]">
-            Every OpenComputer is a real VM. Not a microVM, not a container. A full Linux machine with root access. It hibernates when idle and wakes when you need it. No timeouts, no snapshots to manage. Your computer is just{" "}
-            <em className="font-heading text-[19px]">there</em>.
+            Every OpenComputer is a real VM. Not a microVM, not a container. A
+            full Linux machine with root access. It hibernates when idle and
+            wakes when you need it. No timeouts, no snapshots to manage. Your
+            computer is just <em className="font-heading text-[19px]">there</em>
+            .
           </p>
           <p className="text-[17px] leading-[1.75] tracking-[-0.1px]">
-            Secrets live in a vault. Checkpoint anytime. Break something, roll back in a second.
+            Secrets live in a vault. Checkpoint anytime. Break something, roll
+            back in a second.
           </p>
         </div>
       </FadeIn>
@@ -76,7 +98,17 @@ const Index = () => (
 
     {/* Footer */}
     <footer className="max-w-[994px] mx-auto px-10 py-10 border-t border-border">
-      <span className="font-mono-brand text-[13px] text-muted-foreground">© 2026 opencomputer</span>
+      <span className="font-mono-brand text-[13px] text-muted-foreground">
+        © 2026 opencomputer by{" "}
+        <span className="underline">
+          <a
+            href="/"
+            data-text="digger"
+          >
+            digger
+          </a>
+        </span>
+      </span>
     </footer>
   </div>
 );
